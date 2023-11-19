@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Behance-like Portfolio</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>My Portfolio</h1>
+    <input type="text" id="searchBar" oninput="filterProjects()" placeholder="Search projects">
+    <select id="categoryDropdown" onchange="filterProjects()">
+      <option value="all">All Categories</option>
+      <option value="flower">Flower</option>
+      <option value="lake">Lake</option>
+      <option value="graphics">Graphics</option>
+      <option value="web">Web</option>
+    </select>
+  </header>
+
+  <section id="projects" class="three-columns">
+    <div class="project" data-title="flower1" data-category="flower" data-likes="0" onclick="openProjectModal('flower1', 'A great project!', 'flower1.jpeg')">
+      <img src="flower1.jpeg" alt="Project 1">
+      <h2>Flower 1</h2>
+      <button class="likeButton" onclick="likeProject(this)">Like</button>
+      <span class="likeCount">0</span>
+    </div>
+
+    <div class="project" data-title="lake1" data-category="lake" data-likes="0" onclick="openProjectModal('lake1', 'Another amazing project!', 'lake1.jpg')">
+      <img src="lake1.jpg" alt="Project 2">
+      <h2>Lake 1</h2>
+      <button class="likeButton" onclick="likeProject(this)">Like</button>
+      <span class="likeCount">0</span>
+    </div>
+
+    <div class="project" data-title="lake2" data-category="lake" data-likes="0" onclick="openProjectModal('lake2', 'Yet another project!', 'lake2.jpeg')">
+      <img src="lake2.jpeg" alt="Project 3">
+      <h2>Lake 2</h2>
+      <button class="likeButton" onclick="likeProject(this)">Like</button>
+      <span class="likeCount">0</span>
+    </div>
+
+    <div class="project" data-title="flower2" data-category="flower" data-likes="0" onclick="openProjectModal('flower2', 'Yet another project!', 'flower2.jpeg')">
+      <img src="flower2.jpeg" alt="Project 4">
+      <h2>Flower 2</h2>
+      <button class="likeButton" onclick="likeProject(this)">Like</button>
+      <span class="likeCount">0</span>
+    </div>
+
+    <div class="project" data-title="web1" data-category="web" data-likes="0" onclick="openProjectModal('web1', 'Yet another project!', 'web1.jpg')">
+      <img src="web1.jpg" alt="Project 5">
+      <h2>Web 1</h2>
+      <button class="likeButton" onclick="likeProject(this)">Like</button>
+      <span class="likeCount">0</span>
+    </div>
+
+    <div class="project" data-title="graphics1" data-category="graphics" data-likes="0" onclick="openProjectModal('graphics1', 'Yet another project!', 'graphys1.jpeg')">
+      <img src="graphys1.jpeg" alt="graphics1">
+      <h2>Graphics 1</h2>
+      <button class="likeButton" onclick="likeProject(this)">Like</button>
+      <span class="likeCount">0</span>
+    </div>
+
+    <div class="project" data-title="web2" data-category="web" data-likes="0" onclick="openProjectModal('web2', 'Yet another project!', 'web2.jpg')">
+      <img src="web2.jpg" alt="Project 4">
+      <h2>Web 2</h2>
+      <button class="likeButton" onclick="likeProject(this)">Like</button>
+      <span class="likeCount">0</span>
+    </div>
+
+    <div class="project" data-title="graphics2" data-category="graphics" data-likes="0" onclick="openProjectModal('graphics2', 'Yet another project!', 'graphics2.jpg')">
+      <img src="graphics2.jpg" alt="Project 4">
+      <h2>Graphics 2</h2>
+      <button class="likeButton" onclick="likeProject(this)">Like</button>
+      <span class="likeCount">0</span>
+    </div>
+
+  </section>
+
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeProjectModal()">&times;</span>
+      <h2 id="projectModalTitle"></h2>
+      <p id="projectModalDescription"></p>
+      <img id="projectModalImage" src="" alt="Project Image">
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
